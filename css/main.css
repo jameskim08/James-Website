@@ -1,0 +1,471 @@
+/* Font Family */
+@font-face{
+	font-family: NewsCycle;
+	src: url(../fonts/NewsCycle-Bold.ttf);
+	font-weight: bold;
+}
+
+/* -----------------------------
+           Default Styling
+-------------------------------- */
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+}
+
+*{
+	box-sizing: border-box;
+	font-family: NewsCycle, serif;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.container {
+	width: 90%;
+	margin: auto;
+}
+
+footer {
+	margin-top: auto;
+}
+
+header,
+.title,
+.contacts,
+.navigation,
+.about-section,
+.about-container,
+.footer-container,
+.experience-header,
+.experience-body{
+	display: flex;
+}
+
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+/* Sink */
+.hvr-sink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sink:hover, .hvr-sink:focus, .hvr-sink:active {
+  -webkit-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+
+/* -----------------------------
+           Heading
+-------------------------------- */
+
+header{
+	height: 100vh;
+	flex-direction: column;
+	background-color: #69bdae;
+	justify-content: space-between;
+}
+
+.main-header{
+	padding-top: 2em;
+	background-color: #cce39b;
+}
+
+.title{
+	justify-content: center;
+	max-width: 400px;
+}
+
+.name {
+	width: 100%;
+	height: 80%;
+}
+
+.contacts li img{
+	max-width: 40px;
+	margin: 0 1px;
+
+}
+
+.contacts{
+	margin: 10px 0;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+.header-image {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 100%;
+}
+
+.header-image img{
+	display: block;
+	width: 100%;
+	max-width: 220px;
+	margin: auto;
+}
+
+
+.main-nav {
+	padding-bottom: 3em;
+}
+
+.navigation{
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.main-nav li img {
+	max-width: 110px;
+}
+
+
+/* -----------------------------
+           About Me
+-------------------------------- */
+
+.about-section{
+	padding-top: 4em;
+	padding-bottom: 6em;
+	background-image: url("../img/aboutbackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	min-height: 480px;
+
+	flex-direction: column;
+	justify-content: center;
+}
+
+.about-container{
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.about-container h1{
+	font-size: 3em;
+	padding-bottom: 0.4em;
+    margin-top: 0;
+}
+
+
+/* partial underline */
+ .about-container h1:after {
+     background: none repeat scroll 0 0 white;
+     bottom: -8px;
+     content: "";
+     display: block;
+     height: 1px;
+     position: relative;
+     width: 120px;
+     margin: 0 auto;
+ }
+
+.about-container p{
+	margin-top: -0.3em;
+	line-height: 1.2em;
+	font-size: 1.3em;
+}
+
+.details{
+	font-size: 1.1em;
+}
+
+.details img{
+	vertical-align: middle;
+}
+
+.details:hover{
+	cursor: pointer;
+}
+
+.plus-button{
+	width: 17px;
+}
+
+#about-details{
+	width: 80%;
+	margin: auto;
+	margin-top: 1em;
+	font-size: 1.4em;
+}
+
+/* -----------------------------
+           Projects
+-------------------------------- */
+
+#projects-carousel{
+	margin-bottom: 0;
+}
+
+
+/* indicators */
+.carousel-indicators {
+	bottom: 0;
+}
+
+.carousel-indicators .active {
+	background-color: white;
+}
+
+.carousel-indicators li {
+	border-color: white;
+}
+
+
+/* slides */
+
+.projects-container {
+	margin: auto;
+	height: 100%;
+	height: 18.5em;
+
+}
+
+.carousel-inner{
+	min-height: 300px;
+}
+
+.project-background{
+	position: absolute;
+	min-width: 100%;
+}
+
+.carousel-caption{
+	z-index: 10;
+	width: 50%;
+	margin: auto;
+}
+
+.item{
+	text-align: center;
+	margin: auto;
+}
+
+.item h1{
+	font-size: 25px;
+}
+
+.item p{
+	font-size: 0.9em;
+}
+
+
+/* project details */
+
+#project-1-detail,
+#project-3-detail {
+	background-color: #59bdae;
+}
+
+#project-2-detail{
+	background-color: #64dec9;
+}
+
+.projects-detail-container{
+	width: 90%;
+	margin: auto;
+	padding-top: 0.5em;
+	padding-bottom: 1.5em;
+	color: white;
+}
+
+.projects-detail-container h1{
+	letter-spacing: 0.02em;
+	font-size: 2.1em;
+	margin: 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+
+.projects-detail-container p{
+	line-height: 1.2em;
+	font-size: 0.9em;
+}
+
+
+/* -----------------------------
+           Experience
+-------------------------------- */
+
+/*---- experience header ----*/
+.experience-header{
+	background-color: #82112b;
+	color: white;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.experience-header span{
+	font-size: 2.2em;
+	line-height: 1.25em;
+	height: 45px;
+}
+
+.experience-header img{
+	width: 65px; /* intial width and height is 35px but changed due to padding and border-box */
+	height: 45px;
+	padding-right: 20px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/*---- experience body ----*/
+
+.experience-body{
+	flex-wrap: wrap;
+}
+
+.experience-body h1{
+	margin-top: 0;
+	color: white;
+	width: 70%;
+	margin: auto;
+	font-size: 1.8em;
+	text-align: center;
+
+	/*BANNER CENTER*/
+	background-color: #82112b;
+	display: inline-block;
+	padding: 0.2em 1em;
+	margin: 0;
+	position: relative;
+}
+
+.experience-body p{
+	margin-bottom: 0;
+	width: 90%;
+	margin: auto;
+	margin-top: 1em;
+	padding-bottom: 2em;
+	color: white;
+	font-size: 0.9em;
+}
+
+.experience-container{
+	background-color: #a51336;
+	padding-top: 10px;
+	width: 65%;
+}
+
+.experience-background{
+	width: 35%;
+	background-size: cover;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+
+/*THE BANNER (LEFT SIDE)*/
+.experience-1-header:after {
+	content: '';
+  	width: 2em;
+  	height: 100%;
+  	position: absolute;
+  	top: 0;
+	right: -2em;
+  	background-image: -webkit-linear-gradient(-135deg, transparent 50%, #82112b 50%), -webkit-linear-gradient(135deg, #82112b 50%, transparent 50%);
+  	background-image: -moz-linear-gradient(-135deg, transparent 50%, #82112b 50%), -moz-linear-gradient(135deg, #82112b 50%, transparent 50%);
+  	background-image: -o-linear-gradient(-135deg, transparent 50%, #82112b 50%), -o-linear-gradient(135deg, #82112b 50%, transparent 50%);
+  	background-image: linear-gradient(-135deg, transparent 50%, #82112b 50%), linear-gradient(135deg, #82112b 50%, transparent 50%);
+}
+
+/*THE BANNER (RIGHT SIDE) */
+.experience-2-header:before {
+	left: -2em;
+  	background-image: -webkit-linear-gradient(45deg, transparent 50%, #82112b 50%), -webkit-linear-gradient(-45deg, #82112b 50%, transparent 50%);
+  	background-image: -moz-linear-gradient(45deg, transparent 50%, #82112b 50%), -moz-linear-gradient(-45deg, #82112b 50%, transparent 50%);
+  	background-image: -o-linear-gradient(45deg, transparent 50%, #82112b 50%), -o-linear-gradient(-45deg, #82112b 50%, transparent 50%);
+  	background-image: linear-gradient(45deg, transparent 50%, #82112b 50%), linear-gradient(-45deg, #82112b 50%, transparent 50%);
+}
+
+.ex-bg-1{
+	background-image: url("../img/atrium-on-bay.png");
+}
+
+
+
+
+/* -----------------------------
+           Footer
+-------------------------------- */
+footer {
+	background-color: #3e3e3e;
+	color: white;
+	text-align: center;
+}
+
+.footer-container{
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1em;
+	padding-bottom: 0.8em;
+}
+
+.footer-container img {
+	max-width: 35px;
+}
+
+.footer-container p{
+	margin: auto 0;
+	max-width: 150px;
+	line-height: 1em;
+}
+
+/* Media Queries */
+
+@media (min-width: 430px ){
+	.contacts li img{
+		max-width: 40px;
+		margin: 0 2px;
+	}
+
+	.main-nav li img {
+		max-width: 110px;
+	}
+}
