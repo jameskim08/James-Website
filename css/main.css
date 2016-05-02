@@ -13,6 +13,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	background-color: #cce39b;
 
 }
 
@@ -27,32 +28,37 @@ ul {
 	padding: 0;
 }
 
-
-.container {
-	width: 90%;
-	margin: auto;
-}
-
 footer {
 	margin-top: auto;
 }
 
 header,
+.container,
 .title,
 .contacts,
+.desktop-nav,
 .navigation,
 .about-section,
 .about-container,
+.project-title,
+.details,
 .footer-container,
 .experience-header,
 .experience-body{
 	display: flex;
 }
 
+.box{
+	width: 95%;
+	margin: auto;
+	border: solid black 0.5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 
 /* Grow */
 .hvr-grow {
-    display: inline-block;
+    /*display: inline-block;*/
     vertical-align: middle;
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -96,7 +102,7 @@ header,
 -------------------------------- */
 
 header{
-	height: 100vh;
+	height: 98vh;
 	flex-direction: column;
 	background-color: #69bdae;
 	justify-content: space-between;
@@ -105,6 +111,12 @@ header{
 .main-header{
 	padding-top: 2em;
 	background-color: #cce39b;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+	flex-direction: column;
 }
 
 .title{
@@ -118,15 +130,18 @@ header{
 }
 
 .contacts li img{
-	max-width: 40px;
+	max-width: 20px;
 	margin: 0 1px;
-
 }
 
 .contacts{
 	margin: 10px 0;
 	justify-content: flex-end;
 	align-items: center;
+}
+
+.desktop-nav{
+	display: none;
 }
 
 
@@ -157,6 +172,10 @@ header{
 	max-width: 110px;
 }
 
+
+.glow-effect{
+	display: none;
+}
 
 /* -----------------------------
            About Me
@@ -210,11 +229,9 @@ header{
 }
 
 .details{
-	font-size: 1.1em;
-}
-
-.details img{
-	vertical-align: middle;
+	margin-left: 8px;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .details:hover{
@@ -222,7 +239,7 @@ header{
 }
 
 .plus-button{
-	width: 17px;
+	width: 15px;
 }
 
 #about-details{
@@ -236,8 +253,13 @@ header{
            Projects
 -------------------------------- */
 
+#projects{
+	height: 480px;
+}
+
 #projects-carousel{
 	margin-bottom: 0;
+	height: 100%;
 }
 
 
@@ -258,46 +280,69 @@ header{
 /* slides */
 
 .projects-container {
+/*	position: relative;*/
 	margin: auto;
 	height: 100%;
-	height: 18.5em;
-
 }
 
 .carousel-inner{
-	min-height: 300px;
+	width: 100%;
+	height: 100%;
+/*	position: relative;*/
+	overflow: hidden;
 }
 
 .project-background{
-	position: absolute;
+/*	position: absolute;*/
 	min-width: 100%;
+	min-height: 480px;
 }
 
 .carousel-caption{
 	z-index: 10;
 	width: 50%;
 	margin: auto;
+/*	position: absolute;*/
+  	top: 50%;
+  	transform: translateY(-50%);
+  	bottom: auto;
+  	text-align: left;
+}
+
+.project-title{
+	justify-content: flex-start;
+	border-bottom: solid #fff 1px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.project-title h1{
+	font-size: 1.3em;
+	margin: 0;
 }
 
 .item{
-	text-align: center;
 	margin: auto;
+	height: 100%;
 }
 
-.item h1{
-	font-size: 25px;
-}
-
-.item p{
-	font-size: 0.9em;
+.projects-container p{
+	font-size: 0.8em;
+	line-height: 1em;
 }
 
 
 /* project details */
 
+.proj-dtl{
+	margin-bottom: 0;
+}
+
 #project-1-detail,
 #project-3-detail {
 	background-color: #59bdae;
+	margin-bottom: auto;
+	bottom: 0;
 }
 
 #project-2-detail{
@@ -330,12 +375,17 @@ header{
            Experience
 -------------------------------- */
 
+.experience{
+	display: block;
+}
+
 /*---- experience header ----*/
 .experience-header{
 	background-color: #82112b;
 	color: white;
 	justify-content: flex-end;
 	align-items: center;
+	margin-top: auto;
 }
 
 .experience-header span{
@@ -459,7 +509,17 @@ footer {
 
 /* Media Queries */
 
-@media (min-width: 430px ){
+@media (min-width: 300px){
+	.contacts li img {
+		max-width: 30px;
+	}
+
+	.project-title h1{
+		font-size: 1.3em;
+	}
+}
+
+@media (min-width: 430px){
 	.contacts li img{
 		max-width: 40px;
 		margin: 0 2px;
@@ -468,4 +528,251 @@ footer {
 	.main-nav li img {
 		max-width: 110px;
 	}
+
+	.plus-button{
+		width: 16px;
+	}
+
+	.project-title h1{
+		font-size: 1.8em;
+	}
+
+	.project-title .details {
+		margin-left: 12px;
+	}
+
+	.carousel-caption p{
+		font-size: 0.9em;
+	}
+
+}
+
+@media (min-width: 550px){
+
+	header{
+		background-color: #cce39b;
+		justify-content: center;
+	}
+
+	.title{
+		max-width: 650px;
+	}
+
+	.contacts li img {
+		max-width: 50px;
+	}
+
+	.header-image{
+		display: none;
+	}
+
+	.main-nav li img {
+		max-width: 130px;
+	}
+
+}
+
+
+/* -----------------------------
+         
+           DESKTOP
+
+-------------------------------- */
+
+@media (min-width: 800px){
+
+	/* -----------------------------
+           		Heading
+	-------------------------------- */
+	header{
+		position: relative;
+		z-index: 1;
+	}
+
+	.main-header{
+		padding: 0;
+	}
+
+	.container{
+		position: relative;
+		margin-top: -10%;
+		padding: 0;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		max-height: 700px;
+		margin: auto;
+	}
+
+	.title{
+		width: 50%;
+		position: absolute;
+		left: 50%;
+  		transform: translate(-55%, -50%);
+  		right: auto;
+  		top: 50%;
+  		bottom: auto;
+	}
+
+	.container::before{
+		content: none !important;
+	}
+
+	.container::after{
+		content: none !important;
+	}
+
+	.contacts{
+		z-index: 3;
+		order: 1;
+		flex-direction: column;
+		justify-content: center;
+		width: 10%;
+	}
+
+	.contacts li{
+		margin: 5px 0;
+	}
+
+	.desktop-nav{
+		z-index: 3;
+		display: block;
+		order: 3;
+		align-self: center;
+		margin: 10px 0;
+		align-items: center;
+		color: #fff;
+	}
+
+	.desktop-nav li{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-right: 20px;
+		padding: 5px 20px;
+		border: solid #fff 3px;
+		border-radius: 5px;
+		font-size: 1.2em;
+	}
+
+	.desktop-nav a li{
+		color: #fff;
+	}
+
+	.desktop-nav a{
+		text-decoration: none;
+	}
+
+	.desktop-nav{
+		text-align: center;
+	}
+
+	.main-nav{
+		display: none;
+	}
+
+	.glow-effect{
+		display: block;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+		bottom: 0;
+	}
+
+	/* -----------------------------
+           		About Me
+	-------------------------------- */
+
+	.plus-button{
+		width: 18px;
+	}
+
+	/* -----------------------------
+           		Projects
+	-------------------------------- */
+
+	#projects{
+		height: 700px;
+	}
+
+	.project-background{
+		min-height: 700px;
+	}
+
+
+	.project-title h1{
+		font-size: 2em;
+	}
+
+	.project-title .details {
+		margin-left: 12px;
+	}
+
+	.carousel-caption p{
+		font-size: 1em;
+	}
+
+}
+
+@media (min-width: 1000px){
+
+	.desktop-nav li{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-right: 40px;
+		padding: 5px 20px;
+		border: solid #fff 3px;
+		border-radius: 5px;
+		font-size: 1.5em;
+	}	
+
+	.contacts li img{
+		max-width: 55px;
+	}	
+
+	
+	.carousel-caption{
+		width: 40%;
+	}
+
+}
+
+@media (min-width: 1500px){
+	.desktop-nav li{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-right: 70px;
+		padding: 5px 20px;
+		border: solid #fff 3.8px;
+		border-radius: 6px;
+		font-size: 1.8em;
+	}	
+
+	.contacts li img{
+		max-width: 60px;
+	}	
+
+	.title{
+		transform: translate(-52%, -50%);
+	}
+
+	.plus-button{
+		width: 22px;
+	}
+
+	.carousel-caption{
+		width: 35%;
+	}
+
+	.project-title h1{
+		font-size: 2.5em;
+	}
+
+	.project-title .details {
+		margin-left: 12px;
+	}
+
+	.carousel-caption p{
+		font-size: 1.2em;
+	}
+
 }
