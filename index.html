@@ -25,13 +25,13 @@
 					</ul>
 					<ul class="desktop-nav">
 						<a href="#about"><li>ABOUT ME</li></a>
-						<a href="#projects"><li>PROJECTS</li></a>
 						<a href="#experience"><li>EXPERIENCE</li></a>
+						<a href="#projects"><li>PROJECTS</li></a>
 					</ul>
 					<ul class="mobile-nav">
 						<a class="hvr-sink" href="#about"><li><img src="img/aboutme.png" alt="About" class="img-responsive"></li></a>
-						<a class="hvr-sink" href="#projects"><li><img src="img/Projects.png" alt="Projects" class="img-responsive"></li></a>
 						<a class="hvr-sink" href="#experience"><li><img src="img/EXP.png" alt="Experience" class="img-responsive"></li></a>
+						<a class="hvr-sink" href="#projects"><li><img src="img/Projects.png" alt="Projects" class="img-responsive"></li></a>
 					</ul>
 				</div>
 
@@ -40,24 +40,56 @@
 		</header>
 
 		<!-- About Me -->
-		<div id="about" class="about-section box">
+		<div id="about" class="box">
 			<div class="container">
 				<div id="about-header" class="heading">
 					<h1>ABOUT ME</h1>
-					<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#about-details"><img src="img/purpleplus.png"></span>
+					<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#about-details"><img src="img/blueplus.png"></span>
 				</div>
-				<div id="about-details" class="collapse in">
+				<div id="about-details" class="collapse">
 					<p> Systems design engineer. Iz so kWe'll teach you how to upload images, video files, and messages to Parse.com's cloud servers. Then learn how to retrieve the data by setting up custom queries that download and display them in the app. </p>
-				</div>		
+					<img class="about-picture" src="img/toothless baymax.jpg" alt="Me">
+				</div>	
+			</div>
+		</div>
+
+		<!-- Experience -->
+		<div id="experience">
+			<div id="experience-heading" class="box">
+				<div class="container">
+					<div class="heading">
+						<h1>EXPERIENCE</h1>
+						<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#experience-details"><img src="img/blueplus.png" alt="details"></span>
+					</div>
+				</div>
+			</div>
+			<div id="experience-details" class="collapse in">
+				<div id="experience-1" class="box">
+					<div class="container">
+						<h1>Office of the Public Guardian and Trustee</h1>
+						<div class="experience-body">
+							<p>Systems Officer<br>January 2016 - April 2016<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<img src="img/atrium-on-bay.png" alt="OPGT">
+						</div>
+					</div>
+				</div>
+				<!-- <div id="experience-2" class="box">
+				</div> -->
 			</div>
 		</div>
 
 
 		<!-- Projects Carousel -->
-		<div id="projects box">
-			<div id="projects-heading" class="box heading">
-				<h1>PROJECTS</h1>
-				<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#projects-carousel"><img src="img/purpleplus.png" alt="details"></span>
+		<div id="projects">
+			<div id="projects-heading" class="box">
+				<div class="container">
+					<div class="heading">
+						<h1>PROJECTS</h1>
+						<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#projects-carousel"><img src="img/blueplus.png" alt="details"></span>
+					</div>
+				</div>
 			</div>
 
 			<div id="projects-carousel" class="carousel slide collapse">
@@ -73,7 +105,7 @@
 						<div class="projects-container">
 							<div class="carousel-caption">
 								<div class="project-title">
-									<h1>PERSONAL WEBSITE</h1>
+									<h1>Personal Website</h1>
 									<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#project-1-detail"><img src="img/blueplus.png" ></span>
 								</div>
 								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -136,28 +168,9 @@
 			</div> 
 		</div>
 
-		<!-- Experience -->
-		<div class="experience box">
-			<div class="experience-header">
-				<span>Experience</span><img src="img/trophy.png" alt="experience icon">
-			</div>
-			
-			<div class="experience-body">
-				<div class="experience-container">
-					<h1 class="experience-1-header">The OPGT</h1>
-					<div class="experience-body">
-						<p>Systems Officer<br>January 2016 - April 2016<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-				<div class="experience-background ex-bg-1"></div>
-			</div>
-		</div>
-
 		<!-- Footer -->
 		<footer>
-			<div class="footer-container">
+			<div class="footer-container box">
 				<p>Interested? Click to download my resume!</p>
 				<img src="img/download.png" alt="download">
 			</div>
@@ -165,5 +178,6 @@
 
 		<script src="http://code.jquery.com/jquery.js"></script>
     	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/script.js"></script>
 	</body>
 </html>
