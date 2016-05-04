@@ -317,6 +317,10 @@ header{
 	line-height: 1em;
 }
 
+#projects-carousel{
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
 /* project details */
 
@@ -477,6 +481,10 @@ footer {
 
 	.plus-button img{
 		width: 18px;
+	}
+
+	.heading .plus-button{
+		display: none;
 	}
 
 	/* -----------------------------
