@@ -24,14 +24,14 @@
 						<li><a href="mailto:jamesyk1997@gmail.com"><img src="img/mail.png" alt="email" class="email img-responsive"></a></li>
 					</ul>
 					<ul class="desktop-nav">
-						<a href="#about"><li>ABOUT ME</li></a>
-						<a href="#experience"><li>EXPERIENCE</li></a>
-						<a href="#projects"><li>PROJECTS</li></a>
+						<a href="#about" class="smoothScroll"><li>ABOUT ME</li></a>
+						<a href="#experience" class="smoothScroll"><li>EXPERIENCE</li></a>
+						<a href="#projects" class="smoothScroll"><li>PROJECTS</li></a>
 					</ul>
 					<ul class="mobile-nav">
-						<a class="hvr-sink" href="#about"><li><img src="img/aboutme.png" alt="About" class="img-responsive"></li></a>
-						<a class="hvr-sink" href="#experience"><li><img src="img/EXP.png" alt="Experience" class="img-responsive"></li></a>
-						<a class="hvr-sink" href="#projects"><li><img src="img/Projects.png" alt="Projects" class="img-responsive"></li></a>
+						<a class="hvr-sink smoothScroll" href="#about"><li><img src="img/aboutme.png" alt="About" class="img-responsive"></li></a>
+						<a class="hvr-sink smoothScroll" href="#experience"><li><img src="img/EXP.png" alt="Experience" class="img-responsive"></li></a>
+						<a class="hvr-sink smoothScroll" href="#projects"><li><img src="img/Projects.png" alt="Projects" class="img-responsive"></li></a>
 					</ul>
 				</div>
 
@@ -41,13 +41,20 @@
 
 		<!-- About Me -->
 		<div id="about" class="box">
-			<div class="container">
+			<div class="container heading-container">
 				<div id="about-header" class="heading">
 					<h1>ABOUT ME</h1>
 					<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#about-details"><img src="img/blueplus.png"></span>
 				</div>
+			</div>
+			<div class="container">
 				<div id="about-details" class="collapse">
-					<p> Systems design engineer. Iz so kWe'll teach you how to upload images, video files, and messages to Parse.com's cloud servers. Then learn how to retrieve the data by setting up custom queries that download and display them in the app. </p>
+					<p> Hello! I am a Systems Design Engineering student on my 1B term at the University of Waterloo. I’m currently exploring different paths and currently interested in front-end and Android development. In my spare time, I enjoy playing the piano, camping, and playing strategy video games. I have just finished my co-op term as a Systems Support Officer at the Office of the Public Guardian and Trustee and am currently seeking an internship for this upcoming Fall season. Contact me if you are interested!<br><br>
+					Qualifications:<br>
+					Proficiency in HTML, CSS, JavaScript, JQuery, Bootstrap<br>
+					Experience in Java, Android Studios, C++, XML, AJAX<br>
+					Knowledge in Git, Linux, SQL<br><br><br>
+					</p>
 					<img class="about-picture" src="img/toothless baymax.jpg" alt="Me">
 				</div>	
 			</div>
@@ -56,7 +63,7 @@
 		<!-- Experience -->
 		<div id="experience">
 			<div id="experience-heading" class="box">
-				<div class="container">
+				<div class="container heading-container">
 					<div class="heading">
 						<h1>EXPERIENCE</h1>
 						<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#experience-details"><img src="img/blueplus.png" alt="details"></span>
@@ -68,10 +75,11 @@
 					<div class="container">
 						<h1>Office of the Public Guardian and Trustee</h1>
 						<div class="experience-body">
-							<p>Systems Officer<br>January 2016 - April 2016<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<img src="img/atrium-on-bay.png" alt="OPGT">
+							<p>Systems Officer<br>
+							January 2016 - April 2016<br><br>
+							During my first co-op term, I worked in the Technology Services department at the Office of the Public Guardian and Trustee, Ministry of the Attorney General. The office holds over 450 employees with jobs ranging from accountants to lawyers to client services. My primary role was to monitor, troubleshoot, and resolve any hardware or software related issues that the employees face. When not occupied with the incident queue, I was working on numerous different projects such as writing automation scripts, learning and creating documentation for new software, and completing the computer refresh project.
+							</p>
+							<img src="img/MAG.png" alt="OPGT">
 						</div>
 					</div>
 				</div>
@@ -84,7 +92,7 @@
 		<!-- Projects Carousel -->
 		<div id="projects">
 			<div id="projects-heading" class="box">
-				<div class="container">
+				<div class="container heading-container">
 					<div class="heading">
 						<h1>PROJECTS</h1>
 						<span class="plus-button hvr-grow" data-toggle="collapse" data-target="#projects-carousel"><img src="img/blueplus.png" alt="details"></span>
@@ -92,7 +100,7 @@
 				</div>
 			</div>
 
-			<div id="projects-carousel" class="carousel slide collapse box">
+			<div id="projects-carousel" class="carousel slide collapse box" data-interval="false">
 				<ol class="carousel-indicators">
 					<li class="active" data-target="#projects-carousel" data-slide-to="0"></li>
 					<li data-target="#projects-carousel" data-slide-to="1"></li>
@@ -107,9 +115,7 @@
 								<div class="project-title">
 									<h1>Personal Website</h1>
 								</div>
-								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-		    						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		    						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								<p> My first big project! I developed my own personal website to display information about me, my past work experiences, and my projects. After I finished coding my own website, I continued on to develop portfolio websites for colleagues.</p>
 		 					</div>
 						</div>
 					</div>
@@ -147,7 +153,7 @@
 
 			<div id="project-1-detail" class="collapse proj-dtl box">
 				<div class="projects-detail-container">
-					<h1>Project 1</h1>
+					<h1>Personal Website Details</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -177,12 +183,12 @@
 		<footer>
 			<div class="footer-container box">
 				<p>Interested? Click to download my resume!</p>
-				<img src="img/download.png" alt="download">
 			</div>
 		</footer>  			
 
 		<script src="http://code.jquery.com/jquery.js"></script>
     	<script src="js/bootstrap.min.js"></script>
+    	<script type="text/javascript" src="js/smoothscroll.js"></script>
     	<script src="js/script.js"></script>
 	</body>
 </html>

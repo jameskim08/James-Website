@@ -13,7 +13,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	background-color: #cce39b;
+	background-color: #2cb48b;
 
 }
 
@@ -51,7 +51,8 @@ header,
 .box{
 	width: 95%;
 	margin: auto;
-	border: solid black 0.5px;
+	/*border: solid black 0.5px;*/
+	box-shadow: 0.5px 0.5px 3px #000;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	padding-top: 1em;
@@ -143,7 +144,7 @@ header,
 header{
 	height: 98vh;
 	flex-direction: column;
-	background-color: #cce39b;
+	background-color: #5ada99;
 	justify-content: center;
 }
 
@@ -191,10 +192,7 @@ header{
 -------------------------------- */
 
 #about{
-	background-image: url("../img/aboutbackground.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	background-color: #2bd0aa;
 	color: white;
 }
 
@@ -213,9 +211,17 @@ header{
            Experience
 -------------------------------- */
 
+#experience-heading{
+	background-color: #89e1c9;
+	color: #fff;
+}
+#experience-1{
+	background-color: #89e1c9;
+	color: #fff;	
+}
+
 #experience-details h1{
 	margin-top: 0.3em;
-	color: #fff;
 	font-size: 1.8em;
 	text-align: left;
 	border-bottom: solid #fff 1px;
@@ -225,8 +231,7 @@ header{
 #experience-details p{
 	margin-bottom: 0;
 	padding-bottom: 2em;
-	color: white;
-	font-size: 0.9em;
+	font-size: 1em;
 }
 
 .experience-body img{
@@ -237,9 +242,15 @@ header{
            Projects
 -------------------------------- */
 
+#projects-heading{
+	background-color: #2bbdcd;
+	color: #fff;
+}
+
 #projects-carousel{
 	margin-bottom: 0;
 	height: 100%;
+
 }
 
 
@@ -293,7 +304,7 @@ header{
 }
 
 .project-title h1{
-	font-size: 0.6em;
+	font-size: 1.3em;
 	margin: 0;
 }
 
@@ -313,7 +324,7 @@ header{
 }
 
 .projects-container p{
-	font-size: 0.8em;
+	font-size: 1em;
 	line-height: 1em;
 }
 
@@ -325,19 +336,9 @@ header{
 /* project details */
 
 .proj-dtl{
-	margin-bottom: 0;
-	margin-top: 0;
-}
-
-#project-1-detail,
-#project-3-detail {
-	background-color: #59bdae;
-	margin-bottom: auto;
-	bottom: 0;
-}
-
-#project-2-detail{
-	background-color: #64dec9;
+	background-color: #2bbdcb;
+	color: #fff;
+	margin-top: 2.5px;
 }
 
 .projects-detail-container{
@@ -352,34 +353,25 @@ header{
 	letter-spacing: 0.02em;
 	font-size: 2.1em;
 	margin: 0;
-	padding-top: 0.5em;
-	padding-bottom: 0.2em;
 }
 
 .projects-detail-container p{
+	margin-top: 0.75em;
 	line-height: 1.2em;
-	font-size: 0.9em;
+	font-size: 1em;
 }
 
 /* -----------------------------
            Footer
 -------------------------------- */
-footer {
-	color: white;
-	text-align: center;
-}
 
 .footer-container{
-	flex-direction: row;
-	flex-wrap: wrap;
+	color: white;
+	text-align: center;
+	background-color: #51cfc9;
 	justify-content: center;
-	align-items: center;
 	padding-top: 1em;
 	padding-bottom: 0.8em;
-}
-
-.footer-container img {
-	max-width: 35px;
 }
 
 .footer-container p{
@@ -398,6 +390,15 @@ footer {
 /* Media Queries */
 
 @media (min-width: 300px){
+
+	/* Font Sizes */
+
+	.project-title h1{
+		font-size: 1.3em;
+	}
+
+	/* Image Sizes */
+
 	.contacts li img {
 		max-width: 30px;
 	}
@@ -406,14 +407,25 @@ footer {
 		max-width: 75px;
 	}
 
-	.project-title h1{
-		font-size: 1.3em;
-	}
+	
 
 
 }
 
 @media (min-width: 430px){
+
+	/* Font Sizes */
+
+	.project-title h1{
+		font-size: 1.8em;
+	}
+
+	.carousel-caption p{
+		font-size: 1.2em;
+	}
+
+	/* Image Sizes */
+
 	.contacts li img{
 		max-width: 40px;
 		margin: 10px 10px;
@@ -427,26 +439,21 @@ footer {
 		width: 16px;
 	}
 
-	.project-title h1{
-		font-size: 1.8em;
-	}
+	/* Other */
 
 	.project-title .details {
 		margin-left: 12px;
 	}
 
-	.carousel-caption p{
-		font-size: 0.9em;
-	}
+	
 
 }
 
 @media (min-width: 550px){
 
-	header{
-		background-color: #cce39b;
-		justify-content: center;
-	}
+	/* Font Sizes */
+
+	/*Image Sizes*/
 
 	.title{
 		max-width: 650px;
@@ -460,16 +467,66 @@ footer {
 		max-width: 50px;
 	}
 
-	.header-image{
-		display: none;
-	}
-
 	.mobile-nav img {
 		max-width: 130px;
 	}
 
 }
 
+@media (min-width: 720px){
+
+	/* Font Sizes */
+
+	.heading h1{
+	font-size: 2.5em;
+	}
+
+	#about-details,
+	#experience-details p,
+	.projects-detail-container p {
+		font-size: 1.3em;
+	}
+
+	#experience-details h1,
+	.projects-detail-container h1{
+		font-size: 2em;
+	}
+
+	.project-title h1{
+		font-size: 2.5em;
+	}
+
+
+	/*Image Sizes*/
+
+	.heading .plus-button img{
+		max-width: 20px;
+	}
+
+	.contacts li img{
+		max-width: 60px;
+	}
+
+	.experience-body img{
+		align-self: center;
+		display: inline-block;
+		max-width: 40%;
+		margin-left: 1em;
+	}
+
+	/*Other*/
+
+	.box{
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+
+	.experience-body{
+		flex-direction: row;
+	}
+
+
+}
 
 /* -----------------------------
          
@@ -493,6 +550,7 @@ footer {
 	header{
 		position: relative;
 		z-index: 1;
+		height: 99vh;
 	}
 
 	.main-header{
@@ -594,24 +652,15 @@ footer {
            		Experience
 	-------------------------------- */
 
-	.experience-body{
-		flex-direction: row;
-	}
 
-	.experience-body img{
-		align-self: center;
-		display: inline-block;
-		max-width: 40%;
-		margin-left: 0.5em;
-	}
 
 	/* -----------------------------
            		Projects
 	-------------------------------- */
 
 	.project-background{
-		min-height: 700px;
-		max-height: 700px;
+		min-height: 500px;
+		max-height: 500px;
 
 	}
 
@@ -628,9 +677,33 @@ footer {
 		font-size: 1em;
 	}
 
+	/* -----------------------------
+           		Footer
+	-------------------------------- */
+
+	.footer-container p{
+		max-width: none;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+
 }
 
 @media (min-width: 1000px){
+
+	.box{
+		width: 90%;
+	}
+
+	.container{
+		width: 90%;
+	}
+
+	.heading-container{
+		width: 95%;
+	}
+
+
 
 	.desktop-nav li{
 		margin-top: 20px;
@@ -646,7 +719,11 @@ footer {
 		max-width: 55px;
 	}	
 
-	
+	.project-background{
+		min-height: 650px;
+		max-height: 650px;
+	}
+
 	.carousel-caption{
 		width: 40%;
 	}
@@ -654,6 +731,41 @@ footer {
 }
 
 @media (min-width: 1500px){
+
+	/* Font Sizes */
+	.heading h1{
+	font-size: 3em;
+	}
+
+	#about-details,
+	#experience-details p,
+	.projects-detail-container p {
+		font-size: 1.7em;
+	}
+
+	#experience-details h1,
+	.projects-detail-container h1{
+		font-size: 3em;
+	}
+
+	.project-title h1{
+		font-size: 3em;
+	}
+
+	/*Other*/
+
+	.container{
+		width: 85%;
+	}
+
+	.heading-container{
+		width: 90%;
+	}
+
+	.projects-detail-container{
+		width: 80%;
+	}
+
 	.desktop-nav li{
 		margin-top: 20px;
 		margin-bottom: 20px;
@@ -674,6 +786,11 @@ footer {
 
 	.plus-button img{
 		width: 22px;
+	}
+
+	#experience-details h1{
+		margin-top: 0.6em;
+		margin-bottom: 0.6em;
 	}
 
 	.carousel-caption{

@@ -1,19 +1,3 @@
-//Smooth Scrolling! Credits to Devin https://css-tricks.com/snippets/jquery/smooth-scrolling/
-// $('a[href*=#]:not([href=#])').click(function() {
-//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-//         || location.hostname == this.hostname) {
-
-//         var target = $(this.hash);
-//         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//            if (target.length) {
-//              $('html,body').animate({
-//                  scrollTop: target.offset().top
-//             }, 500);
-//             return false;
-//         }
-//     }
-// });
-
 var $aboutDetails = $("#about-details");
 var $experienceDetails = $("#experience-details");
 var $projectsCarousel = $("#projects-carousel");
@@ -34,11 +18,24 @@ function alignProjectDetails(){
         var $projectDetails = $("#project-" + i + "-detail");
 
         if ($project.hasClass("active")){
+            removeCollapse($projectDetails);
+        } else {
+            addCollapse($projectDetails);
+        }
+    }
+}
+
+function reverseAlignProjectDetails() {
+    for (var i= 1; i<=numProjects; i++){
+        var $project = $(".project-" + i )
+        var $projectDetails = $("#project-" + i + "-detail");
+
+        if ($project.hasClass("active")){
             addCollapse($projectDetails);
         } else {
             removeCollapse($projectDetails);
         }
-    }
+    }    
 }
 
 //------------------------------------------//
@@ -50,6 +47,7 @@ $(document).ready(function() {
         removeCollapse($aboutDetails);
         removeCollapse($experienceDetails);
         removeCollapse($projectsCarousel);
+        removeCollapse($("#project-1-detail"));
     }
 })
 
@@ -62,6 +60,10 @@ $(window).resize(function() {
         removeCollapse($aboutDetails);
         removeCollapse($experienceDetails);
         removeCollapse($projectsCarousel);
+        $aboutDetails.removeAttr("style");
+        $experienceDetails.removeAttr("style");
+        $projectsCarousel.removeAttr("style");
+        alignProjectDetails();
     }
 });
 
@@ -70,15 +72,30 @@ $(window).resize(function() {
 // Projects Detail are aligned with its respective Project
 
 $(document).on("click", "#projects-carousel .carousel-control", function(){
-    alignProjectDetails();
+    reverseAlignProjectDetails();
 });
 
+$(document).on("click", ".carousel-indicators li", function(){
+    reverseAlignProjectDetails();
+});
+
+$projectsCarousel.on('hidden.bs.collapse', function(){
+    for (var i= 1; i<=numProjects; i++){
+        var $projectDetails = $("#project-" + i + "-detail");
+        addCollapse($projectDetails);
+    } 
+});
+
+$projectsCarousel.on('shown.bs.collapse', function(){
+    for (var i= 1; i<=numProjects; i++){
+        alignProjectDetails();
+    } 
+});
+
+
 $(document).on("click", "#projects-heading .plus-button", function(){
-    if ($projectsCarousel.attr("display") == "none"){
-        for (var i= 1; i<=numProjects; i++){
-            //code to add class
-        } 
-    } else {
+    var isExpanded = $projectsCarousel.attr("aria-expanded");
+    if (isExpanded) {
         for (var i= 1; i<=numProjects; i++){
             var $projectDetails = $("#project-" + i + "-detail");
             addCollapse($projectDetails);
@@ -87,3 +104,4 @@ $(document).on("click", "#projects-heading .plus-button", function(){
 })
 
 //-----------------------------------------//
+
