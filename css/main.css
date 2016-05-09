@@ -8,6 +8,10 @@
 /* -----------------------------
            Default Styling
 -------------------------------- */
+*{
+	box-sizing: border-box;
+	font-family: NewsCycle, serif;
+}
 
 body {
 	display: flex;
@@ -17,9 +21,9 @@ body {
 
 }
 
-*{
-	box-sizing: border-box;
-	font-family: NewsCycle, serif;
+div{
+	overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
 }
 
 ul {
