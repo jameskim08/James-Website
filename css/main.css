@@ -274,6 +274,7 @@ header{
 	overflow: hidden;
 }
 
+
 .project-background{
 	min-width: 100%;
 	min-height: 480px;
@@ -358,6 +359,10 @@ header{
            Footer
 -------------------------------- */
 
+footer a:hover{
+	text-decoration: none;
+}
+
 .footer-container{
 	color: white;
 	text-align: center;
@@ -367,10 +372,15 @@ header{
 	padding-bottom: 0.8em;
 }
 
+
 .footer-container p{
 	margin: auto 0;
 	max-width: 150px;
 	line-height: 1em;
+}
+
+.footer-container p:hover{
+	color: #366678;
 }
 
 
